@@ -227,6 +227,8 @@ The main purpose of the `tracestate` HTTP header is to provide additional vendor
 
 If the vendor failed to parse `traceparent`, it MUST NOT attempt to parse `tracestate`. Note that the opposite is not true: failure to parse `tracestate` MUST NOT affect the parsing of `traceparent`.
 
+The `tracestate` HTTP header MUST NOT be used for _application_ level properties such as userId. [W3C baggage](https://github.com/w3c/baggage) provides the specification for defining and propagating application level properties.
+
 ### Header Name
 
 Header name: `tracestate`
